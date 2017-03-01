@@ -1,10 +1,10 @@
 # Koel
 
-![Showcase](http://koel.phanan.net/dist/img/showcase.png)
+![Showcase](https://koel.phanan.net/dist/img/showcase.png)
 
 ## Introduction
 
-[**Koel**](http://koel.phanan.net) (also styled as **koel**, with a lowercase k) is a simple web-based personal audio streaming service written in [Vue](http://vuejs.org/) at the client side and [Laravel](http://laravel.com/) on the server side. Targeting web developers, Koel embraces some of the more modern web technologies – flexbox, audio and drag-and-drop API to name a few – to do its job.
+[**Koel**](https://koel.phanan.net) (also styled as **koel**, with a lowercase k) is a simple web-based personal audio streaming service written in [Vue](https://vuejs.org/) at the client side and [Laravel](https://laravel.com/) on the server side. Targeting web developers, Koel embraces some of the more modern web technologies – flexbox, audio and drag-and-drop API to name a few – to do its job.
 
 ## Requirements
 
@@ -53,7 +53,7 @@ Check out [Releases](https://github.com/phanan/koel/releases) for upgrade guides
 ### Scanning for Music
 Koel is simple. It doesn't handle uploading. It doesn't stream from Spotify. Instead, you upload your songs into a readable directory on your server – preferably outside of your web root dir – and configure Koel to scan and sync it. Such configuration can be found under Manage -> Settings.
 
-![](http://koel.phanan.net/dist/img/settings.png)
+![](https://koel.phanan.net/dist/img/settings.png)
 
 You can also scan and sync the configured directory with the artisan `koel:sync` command:
 
