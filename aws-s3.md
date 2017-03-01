@@ -1,6 +1,6 @@
 # Use Koel with AWS S3
 
-Starting from version v3.0.0, Koel can work seamlessly with Amazon S3 with the help of [the official Koel-AWS package](https://github.com/phanan/koel-aws). This allows you to run Koel in your server and have all media files hosted by Amazon, and save yourself some good hosting fee.
+Starting from version v3.0.0, Koel can work seamlessly with Amazon S3 with the help of [the official Koel-AWS package](https://github.com/koel/koel-aws). This allows you to run Koel in your server and have all media files hosted by Amazon, and save yourself some good hosting fee.
 
 ## How It Works
 
@@ -8,7 +8,7 @@ The easiest way to understand Koel-AWS approach is to take a look at this awesom
 
 <br>
 <p>
-<img src="https://cdn.rawgit.com/phanan/koel-aws/master/assets/diagram.svg?v2"/>
+<img src="https://cdn.rawgit.com/koel/koel-aws/master/assets/diagram.svg?v2"/>
 </p>
 
 ## Supports and Requirements
