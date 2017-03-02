@@ -106,6 +106,7 @@ Using the client component of Koel is dead simple. If you've ever used Spotify, 
 * <kbd>J</kbd> plays the next song in queue
 * <kbd>K</kbd> plays the previous song in queue
 * <kbd>Ctrl/Cmd</kbd>+<kbd>A</kbd> selects all songs in the current view
+* <kbd>Delete</kbd> removes selected song(s) from the current queue/playlist
 
 ## Mobile Support and Limitation
 
