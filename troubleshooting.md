@@ -12,7 +12,7 @@ Solution: Run `yarn` or `npm install`. You can also try running `yarn build` dir
 
 Solution: Add or set `BROADCAST_DRIVER=log` in your `.env` file. This will make `log` the default broadcast driver and not `Pusher`.
 
-#### You receive a `Integrity constraint violation: 1062 Duplicate entry  for key 'artists_name_unique'` error when scanning
+#### You receive an `Integrity constraint violation: 1062 Duplicate entry  for key 'artists_name_unique'` error when scanning
 
 Solution: Set your database and table collation to `utf8_unicode_ci`.
 
