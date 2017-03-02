@@ -1,6 +1,6 @@
-# 3rd-Party Integration
+# 3rd-Party Integrations
 
-Out of the box, Koel supports several (non-mandatory) 3rd-party integrations which (helpfully) enhance your experience. They are…
+Out of the box, Koel supports several (non-mandatory) 3rd-party integrations which should (helpfully) enhance your experience. They are…
 
 ## Last.fm
 
@@ -19,7 +19,7 @@ With YouTube integration, whenever a song is played, Koel will search YouTube fo
 3. From the project's Credentials, click Create credentials → API Key → Server key
 
 <p class="warning">
-YouTube integration is always disabled on mobile naturally. Also, you interact with the videos via YouTube's own controls and not Koel's. Koel's equalizer, volume, seeker, play/pause etc. will simply not work for videos.
+YouTube integration is always disabled on mobile naturally. Also, you interact with the videos via their own controls and not Koel's. Koel's equalizer, volume, seeker, play/pause buttons etc. will simply not work in this context.
 </p>
 
 ## iTunes
