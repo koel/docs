@@ -2,6 +2,7 @@ self.$config = {
   title: 'Koel',
   repo: 'phanan/koel',
   twitter: 'notphanan',
+  'edit-link': 'https://github.com/koel/docs/blob/master',
   home: 'home.md',
   plugins: [
     docsearch({
