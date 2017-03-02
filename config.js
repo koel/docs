@@ -1,4 +1,5 @@
 self.$config = {
+  title: 'Koel',
   repo: 'phanan/koel',
   twitter: 'notphanan',
   home: 'home.md',
