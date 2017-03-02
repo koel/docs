@@ -1,6 +1,6 @@
 # Troubleshooting
 
-So you’re encountering an error. Don’t panic. We’re here to help.
+So you're encountering an error. Don't panic. We're here to help.
 
 ## For Koel
 
@@ -28,13 +28,13 @@ Solution: Look for a space somewhere in other configuration entries in `.env`, f
 ADMIN_NAME=Koel Admin
                ^___ Here you go
 ```
-Wrap the string in quotes and you’re set.
+Wrap the string in quotes and you're set.
 
 #### The song stops playing and you receive a `Failed to load resource: net::ERR_CONTENT_LENGTH_MISMATCH` error
 
 Solution: This usually happens with the native `php` [streaming method](https://github.com/phanan/koel/wiki#streaming-music). Opt for a `x-sendfile` or `x-accel-redirect` if possible.
 
-#### Koel doesn’t play the next song when you lock your phone.
+#### Koel doesn't play the next song when you lock your phone.
 
 Solution: Actually, no solution yet. This is a limitation for mobile browsers. A workaround can be using Google Chrome, which *seems* to be able to continue playback on an iOS device even when the device is locked, as long as it remains the active app.
 
