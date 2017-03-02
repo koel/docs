@@ -100,11 +100,12 @@ Koel supports three streaming methods which can be configured via a `STREAMING_M
 
 Using the client component of Koel is dead simple. If you've ever used Spotify, you should feel right at home. As a matter of fact, Koel's client interface is a shameless rip-off of Spotify's. You can search, you can sort, you can view by artists or albums, you can create playlists, you can like/unlike songs, and you can create other users to share the vibes. There are a couple of shortcut keys, too, for the nerds:
 
-* `F` to set the focus into global search box
-* `Enter` to play a song. If multiple songs are being selected, `Enter` adds them to the bottom of the queue, `Shift+Enter` queues them to top. Adding a `Shift` into the combo plays the first selected song right away.
-* `Space` to toggle playback
-* `J` to play the next song in queue
-* `K` to play the previous song in queue
+* <kbd>F</kbd> sets the focus into global search box
+* <kbd>Enter</kbd> plays a song. If multiple songs are being selected, <kbd>Enter</kbd> adds them to the bottom of the queue, <kbd>Shift</kbd>+<kbd>Enter</kbd> queues them to top. Adding a <kbd>Cmd</kbd> or <kbd>Ctrl</kbd> into the combo plays the first selected song right away.
+* <kbd>Space</kbd> toggles playback
+* <kbd>J</kbd> plays the next song in queue
+* <kbd>K</kbd> plays the previous song in queue
+* <kbd>Ctrl/Cmd</kbd>+<kbd>A</kbd> selects all songs in the current view
 
 ## Mobile Support and Limitation
 
