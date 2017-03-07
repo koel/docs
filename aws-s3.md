@@ -43,7 +43,7 @@ As of current, only `mp3`, `ogg`, and `m4a` files are supported. Also, your Koel
 2. Install necessary packages: `cd koel-aws && npm install --production`
 3. Copy `.env.example` into `.env` and edit the variables there
 4. Zip the whole directory's content into something like `archive.zip`
-5. In AWS Lambda console, create a Lambda function with the following information (**IMPORTANT:** Make sure you're creating the function in the same region with `koel-bucket`)
+5. In AWS Lambda console, create a Lambda function with the following information:
 
     ```
     Name: koel-lambda
@@ -55,6 +55,7 @@ As of current, only `mp3`, `ogg`, and `m4a` files are supported. Also, your Koel
     Timeout: 0min 10sec
     VPC: "No VPC" should be fine
     ```
+<p class="warning">Make sure you're creating the function in the same region with `koel-bucket`.</p>
 
 ### 3. Configure S3 to send events to Lambda
 
