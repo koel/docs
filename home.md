@@ -32,7 +32,7 @@ Now modify `.env` with your details. These are the minimum settings that you nee
 
 * `DB_CONNECTION`, `DB_HOST`, `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`
 * `ADMIN_EMAIL`, `ADMIN_NAME`, `ADMIN_PASSWORD`: Details of the first and only administrator account.
-* `APP_MAX_SCAN_TIME`: The maximum duration for Koel to scan the configured directory for audio files, in seconds. Defaults to 600 (10 minutes). Note: This value has no effect for command line scanning (see [below](#scanning-for-music)).
+* `APP_MAX_SCAN_TIME`: The maximum duration for Koel to scan the configured directory for audio files, in seconds. Defaults to `600` (10 minutes). Note: This value has no effect on command line scanning (see [below](#scanning-for-music)).
 
 After `.env` has been populated, init your Koel instance with
 
@@ -122,7 +122,7 @@ If you know how to fix these issues and enhance Koel's experience, read on.
 
 ## Contribution
 
-I decided to write Koel out of my desperation of not being able to find a decent _and_ simple streaming service that fits my needs. This is my very first hands-on with Vue and ES6, and the code must smell so bad. So, **any** contribution is much appreciated. Bug reports? Bug fixes? Code optimization? Tests? Ideas? Documentation? Please keep them coming!
+I decided to write Koel out of my desperation of not being able to find a decent _and_ simple streaming service that fits my needs. This is my very first hands-on with Vue and ES6, and the code must smell so bad. So, **any** contribution is much appreciated. Bug reports? Bug fixes? Code optimization? Tests? Ideas? Documentation? Please [send them over](https://github.com/phanan/koel/issues/new). 
 
 ## Credits
 
