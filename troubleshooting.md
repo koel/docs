@@ -38,6 +38,8 @@ Solution: This usually happens with the native `php` <a router-link="/home?id=st
 
 Solution: Actually, no solution yet. This is a limitation for mobile browsers. A workaround can be using Google Chrome, which *seems* to be able to continue playback on an iOS device even when the device is locked, as long as it remains the active app.
 
+<p class="tip">Starting from v3.6.0, on Android and with Chrome 57 and newer, playback can now be controlled via the notification center and lock screen, [like this](https://twitter.com/notphanan/status/845849511134031872). This also appears to remove the limitation above.</p>
+
 ## For Koel-AWS
 
 There's nothing here yet (and that's a good thing!)
