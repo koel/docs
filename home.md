@@ -65,7 +65,7 @@ Completed! 931 new or updated songs(s), 0 unchanged song(s), and 7 invalid file(
 
 If you want the syncing details, suffix the command with a `-v` flag.
 
-Of course this command can be added as a cron job, for example to run every midnight:
+This command can also be added as a cron job, for example to run every midnight:
 ```
 0 0 * * * cd /home/user/webapps/koel/ && /usr/local/bin/php70 artisan koel:sync >/dev/null 2>&1
 ```
@@ -98,7 +98,7 @@ Koel supports three streaming methods which can be configured via a `STREAMING_M
 
 ## Usage
 
-Using the client component of Koel is dead simple. If you've ever used Spotify, you should feel right at home. As a matter of fact, Koel's client interface is a shameless rip-off of Spotify's. You can search, you can sort, you can view by artists or albums, you can create playlists, you can like/unlike songs, and you can create other users to share the vibes. There are a couple of shortcut keys, too, for the nerds:
+Using the client component of Koel should be straightforward enough. If you've ever used Spotify, you should feel right at home. As a matter of fact, Koel's client interface is a shameless rip-off of Spotify's. You can search, you can sort, you can view by artists or albums, you can create playlists, you can like/unlike songs, and you can create other users to share the vibes. There are a couple of shortcut keys, too, for the nerds:
 
 * <kbd>F</kbd> sets the focus into global search box
 * <kbd>Enter</kbd> plays a song. If multiple songs are being selected, <kbd>Enter</kbd> adds them to the bottom of the queue, <kbd>Shift</kbd>+<kbd>Enter</kbd> queues them to top. Adding a <kbd>Cmd</kbd> or <kbd>Ctrl</kbd> into the combo plays the first selected song right away.
@@ -110,7 +110,7 @@ Using the client component of Koel is dead simple. If you've ever used Spotify, 
 
 ## Mobile Support and Limitation
 
-The client component of Koel has a responsive GUI that displays fairly well on a mobile device. Certain functionalities are not available, however, some due to technology limitation, some my incompetence. For instance:
+The client component of Koel has a responsive GUI that works fairly well on a mobile device. Certain functionalities are not available, however, some due to technology limitation, some my incompetence. For instance:
 
 * Shortcut keys don't work (duh)
 * Equalizer may *not* work

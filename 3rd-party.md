@@ -19,7 +19,7 @@ With YouTube integration, whenever a song is played, Koel will search YouTube fo
 3. From the project's Credentials, click Create credentials → API Key → Server key
 
 <p class="warning">
-YouTube integration is always disabled on mobile naturally. Also, you interact with the videos via their own controls and not Koel's. Koel's equalizer, volume, seeker, play/pause buttons etc. will simply not work in this context.
+YouTube integration is always disabled on mobile due to OS restrictions. Also, you interact with the videos via their own controls and not Koel's. Koel's equalizer, volume, seeker, play/pause buttons etc. will _not_ work in this context.
 </p>
 
 ## iTunes

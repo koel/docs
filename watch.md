@@ -8,7 +8,7 @@ Starting from v2.1.0, Koel provides a mean to help watch your media directory an
 
 ## Installation
 
-In order to start using the feature, follow these simple steps:
+In order to start using the feature, follow these steps:
 
 ### 1. Install inotify Tools
 
