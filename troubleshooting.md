@@ -16,6 +16,10 @@ Solution: Add or set `BROADCAST_DRIVER=log` in your `.env` file. This will make 
 
 Solution: Set your database and table collation to `utf8_unicode_ci`.
 
+#### You receive a `Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes` error when trying install or upgrade Koel
+
+Solution: This issue has been fixed in v3.6.2. Make sure your Koel version is v3.6.2 or newer.
+
 #### You receive an &lt;input random strings here&gt; error when running `yarn`
 
 Solution: 99% of the time this has little to do with Koel, but with your node/npm/yarn installation. Deleting `node_modules` and rerunning the command sometimes help. Otherwise, Google is your friend.
@@ -33,6 +37,10 @@ Wrap the string in quotes and you're set.
 #### The song stops playing and you receive a `Failed to load resource: net::ERR_CONTENT_LENGTH_MISMATCH` error
 
 Solution: This usually happens with the native `php` <a router-link="/home?id=streaming-music">streaming method</a>. Opt for a `x-sendfile` or `x-accel-redirect` if possible.
+
+#### Song preloading doesn't work properly
+
+Solution: Same as above.
 
 #### Koel doesn't play the next song when you lock your phone.
 
