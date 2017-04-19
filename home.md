@@ -86,9 +86,10 @@ Koel supports three streaming methods which can be configured via a `STREAMING_M
     ``` apacheconf
     LoadModule xsendfile_module   libexec/apache2/mod_xsendfile.so
 
+    # These configuration can be put in the VirtualHost directive as well
     <IfModule mod_xsendfile.c>
       XSendFile on
-      XSendFilePath /var/www/koel
+      XSendFilePath /mnt/media
     </IfModule>
     ```
 
