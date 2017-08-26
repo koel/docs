@@ -40,6 +40,17 @@ After `.env` has been populated, init your Koel instance with
 php artisan koel:init
 ```
 
+Now you need to install node modules which are required by running the following command:
+
+```bash
+npm install
+```
+
+Or you can run the following command as well to complete the installation:
+
+```bash
+yarn
+```
 You should now be able to visit your website and log in with the configured administrator details, which can now be safely removed from `.env`.
 
 If you're on Debian, here's an [unofficial installation guide](https://gist.github.com/bplower/613a99156d603abac083).
