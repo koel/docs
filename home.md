@@ -133,7 +133,7 @@ Koel is built on the shoulder of the giants. My sincere thanks go to the guys be
 
 The continuous development of Koel is made possible thanks to the support of these awesome sponsors:
 
-<a href="https://www.exoscale.ch/"><img src="img/exoscale.png" alt="Exoscale" height="64"></a>
-<a href="https://www.keycdn.com/?a=11519"><img src="img/keycdn.png" alt="KeyCDN" height="64"></a>
+<a href="https://www.exoscale.ch/"><img src="https://www.exoscale.ch/static/img/exoscale-logo-full-201711.svg" alt="Exoscale" height="64"></a>
+<a href="https://www.keycdn.com/?a=11519"><img src="https://www.keycdn.com/img/logo.svg" alt="KeyCDN" height="64"></a>
 
 Want to help as well? Please <a href="mailto:me@phanan.net">drop me an email</a>.
