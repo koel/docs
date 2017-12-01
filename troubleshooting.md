@@ -12,6 +12,10 @@ Solution: Run `yarn` or `npm install`. You can also try running `yarn build` dir
 
 Solution: Add or set `BROADCAST_DRIVER=log` in your `.env` file. This will make `log` the default broadcast driver and not `Pusher`.
 
+#### You receive an Unknown error when scanning using the web interface
+
+Solution: Try scanning from the command line with `php artisan koel:sync`. Most of the time, you should receive a more detailed, easier to debug, message.
+
 #### You receive an `Integrity constraint violation: 1062 Duplicate entry  for key 'artists_name_unique'` error when scanning
 
 Solution: Set your database and table collation to `utf8_unicode_ci`.
