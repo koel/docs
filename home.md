@@ -24,43 +24,39 @@ From your console, run the following commands:
 ```bash
 cd PUBLIC_DIR
 git clone https://github.com/phanan/koel.git .
-git checkout v3.4.0 # Check out the latest version at https://github.com/phanan/koel/releases
+git checkout v3.7.0 # Check out the latest version at https://github.com/phanan/koel/releases
 composer install
+php artisan koel:init # Populate credentials during the process
+
+php artisan serve
 ```
 
-Now modify `.env` with your details. These are the minimum settings that you need to fill in:
+You should now be able to visit [http://localhost:8000](http://localhost:8000) in your browser and start using Koel.
 
-* `DB_CONNECTION`, `DB_HOST`, `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`
-* `ADMIN_EMAIL`, `ADMIN_NAME`, `ADMIN_PASSWORD`: Details of the first and only administrator account.
-* `APP_MAX_SCAN_TIME`: The maximum duration for Koel to scan the configured directory for audio files, in seconds. Defaults to `600` (10 minutes). Note: This value has no effect on command line scanning (see [below](#scanning-for-music)).
+If you're on Debian, here's an [unofficial installation guide](https://gist.github.com/bplower/613a99156d603abac083). This may or may not be out of date, so use it with your own risk.
 
-After `.env` has been populated, init your Koel instance with
-
-```bash
-php artisan koel:init
-```
-
-You should now be able to visit your website and log in with the configured administrator details, which can now be safely removed from `.env`.
-
-If you're on Debian, here's an [unofficial installation guide](https://gist.github.com/bplower/613a99156d603abac083).
+If you want more control, edit `.env` file. There's quite a few settings there to tweak Koel to your needs.
 
 ## Upgrade
 
 Check out [Releases](https://github.com/phanan/koel/releases) for upgrade guides corresponding to your Koel version.
 
-## Configuration
+## Configuration and Usage
 
 ### Scanning for Music
 Koel is simple. It doesn't handle uploading. It doesn't stream from Spotify. Instead, you upload your songs into a readable directory on your server – preferably outside of your web root dir – and configure Koel to scan and sync it. Such configuration can be found under Manage -> Settings.
 
 ![](https://koel.phanan.net/dist/img/settings.png)
 
-You can also scan and sync the configured directory with the artisan `koel:sync` command:
+You can also scan from the CLI – which is faster, without a time limit, and provides feedbacks – with the artisan `koel:sync` command:
 
 ```bash
 $ php artisan koel:sync
-Koel syncing started. All we need now is just a little patience…
-Completed! 931 new or updated songs(s), 0 unchanged song(s), and 7 invalid file(s).
+Koel syncing started.
+
+ 953/953 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+Completed! 944 new or updated song(s), 0 unchanged song(s), and 9 invalid file(s).
 ```
 
 If you want the syncing details, suffix the command with a `-v` flag.
@@ -97,7 +93,7 @@ Koel supports three streaming methods which can be configured via a `STREAMING_M
 
 <p class="warning">`STREAMING_METHOD` doesn't have effects if you're serving songs from Amazon S3.</p>
 
-## Usage
+### Using the Web Interface
 
 Using the client component of Koel should be straightforward enough. If you've ever used Spotify, you should feel right at home. As a matter of fact, Koel's client interface is a shameless rip-off of Spotify's. You can search, you can sort, you can view by artists or albums, you can create playlists, you can like/unlike songs, and you can create other users to share the vibes. There are a couple of shortcut keys, too, for the nerds:
 
@@ -108,6 +104,19 @@ Using the client component of Koel should be straightforward enough. If you've e
 * <kbd>K</kbd> plays the previous song in queue
 * <kbd>Ctrl/Cmd</kbd>+<kbd>A</kbd> selects all songs in the current view
 * <kbd>Delete</kbd> removes selected song(s) from the current queue/playlist
+
+### Remote Controller
+
+Starting from v3.7.0, Koel has a (mobile) remote controller that lets you control a desktop instance – play/pause, navigate, turn volume up/down,and add/remove from Favorites.
+
+<img src="https://user-images.githubusercontent.com/8056274/33527904-c8ef579e-d858-11e7-84cf-1b85e18e9841.png" alt="Remote controller screenshot" width=320>
+
+In order to use the feature:
+
+1. [Register for a Pusher account](https://www.pushbullet.com/) and create an app
+1. Populate the app's credentials into `.env` (those starts with `PUSHER_`)
+1. Reload the desktop Koel instance
+1. Go to http://&lt;your-koel-host&gt;/remote on a mobile device to start controlling remotely. You may also want to add the URL to the home screen for faster access later.
 
 ## Mobile Support and Limitation
 
@@ -123,7 +132,7 @@ If you know how to fix these issues and enhance Koel's experience, read on.
 
 ## Contribution
 
-I decided to write Koel out of my desperation of not being able to find a decent _and_ simple streaming service that fits my needs. This is my very first hands-on with Vue and ES6, and the code must smell so bad. So, **any** contribution is much appreciated. Bug reports? Bug fixes? Code optimization? Tests? Ideas? Documentation? Please [send them over](https://github.com/phanan/koel/issues/new). 
+I decided to write Koel out of my desperation of not being able to find a decent _and_ simple streaming service that fits my needs. This is my very first hands-on with Vue and ES6, and the code must smell so bad. So, **any** contribution is much appreciated. Bug reports? Bug fixes? Code optimization? Tests? Ideas? Documentation? Please [send them over](https://github.com/phanan/koel/issues/new).
 
 ## Credits
 
