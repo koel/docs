@@ -19,6 +19,9 @@ Koel has two components, each with its own set of requirements:
 * Any decent web browser will do – Koel has been tested on Chrome 47, Firefox 42, Safari 8, Opera 34, and Edge.
 
 ## Installation
+
+### Manually
+
 From your console, run the following commands:
 
 ```bash
@@ -36,6 +39,10 @@ You should now be able to visit [http://localhost:8000](http://localhost:8000) i
 If you're on Debian, here's an [unofficial installation guide](https://gist.github.com/bplower/613a99156d603abac083). This may or may not be out of date, so use it with your own risk.
 
 If you want more control, edit `.env` file. There's quite a few settings there to tweak Koel to your needs.
+
+### With Docker
+
+Koel doesn't maintain an official Docker image, but community-supported ones like [0xcaff/koel](https://hub.docker.com/r/0xcaff/koel/) and [binhex/arch-koel](https://hub.docker.com/r/binhex/arch-koel/) are available.
 
 ## Upgrade
 
