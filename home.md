@@ -114,7 +114,7 @@ Using the client component of Koel should be straightforward enough. If you've e
 
 ### Remote Controller
 
-Starting from v3.7.0, Koel has a (mobile) remote controller that lets you control a desktop instance – play/pause, navigate, turn volume up/down,and add/remove from Favorites.
+Starting from v3.7.0, Koel has a (mobile) remote controller that lets you control a desktop instance – play/pause, navigate, turn volume up/down, and add/remove from Favorites.
 
 <img src="https://user-images.githubusercontent.com/8056274/33527904-c8ef579e-d858-11e7-84cf-1b85e18e9841.png" alt="Remote controller screenshot" width=320>
 
