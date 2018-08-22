@@ -121,7 +121,7 @@ Starting from v3.7.0, Koel has a (mobile) remote controller that lets you contro
 In order to use the feature:
 
 1. [Register for a Pusher account](https://www.pusher.com) and create an app
-1. Populate the app's credentials into `.env` (those starts with `PUSHER_`)
+1. Populate the app's credentials into `.env` (those start with `PUSHER_`)
 1. Reload the desktop Koel instance
 1. Go to http://&lt;your-koel-host&gt;/remote on a mobile device to start controlling remotely. You may also want to add the URL to the home screen for faster access later.
 
