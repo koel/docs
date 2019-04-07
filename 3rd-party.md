@@ -6,7 +6,7 @@ Out of the box, Koel supports several (non-mandatory) 3rd-party integrations whi
 
 Connecting Koel to Last.fm will instruct Koel to retrieve possible artist and album information from Last.fm as well as support scrobbling. To enable the connection:
 
-1. [Create a Last.fm API account](https://www.last.fm/api/account/create)
+1. [Create a Last.fm API account](https://www.last.fm/api/account/create). In the **Callback URL** field, fill in `<your-koel-host>/api/lastfm/callback` (though this is not really important).
 1. Populate the two variables `LASTFM_API_KEY` and `LASTFM_API_SECRET` with the credentials grabbed from step 1. This should enable Last.fm media information retrieving.
 1. To enable scrobbling as well, go to `http://<your-koel-host>/#!/profile` and click the **Connect** button under Last.fm Integration.
 
