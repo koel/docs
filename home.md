@@ -75,6 +75,8 @@ This command can also be added as a cron job, for example to run every midnight:
 
 As of current, Koel recognizes these audio extensions: `.mp3`, `.ogg`, `.m4a` (experimental), and `.flac` (experimental with some limitations). Others may be added in the future.
 
+If you're syncing compilation albums (albums with multiple songs from different artists) make sure the "Band" tag is set, otherwise each song will end up in its own album. Some ripping software sets this automatically; make sure yours does.
+
 <p class="tip">Starting from v2.1.0, you can <a router-link="/watch">watch a directory</a> and sync on the fly with `inotifywait`.</p>
 
 <p class="tip">Starting from v3.0.0, you can <a router-link="/aws-s3">use Koel with Amazon S3</a>.</p>
