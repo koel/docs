@@ -66,9 +66,10 @@ Koel syncing started.
 Completed! 944 new or updated song(s), 0 unchanged song(s), and 9 invalid file(s).
 ```
 
-If you want the syncing details, suffix the command with a `-v` flag.
+Suffix the command with a `-v` flag for more details e.g. syncing errors.
 
 This command can also be added as a cron job, for example to run every midnight:
+
 ```
 0 0 * * * cd /home/user/webapps/koel/ && /usr/local/bin/php70 artisan koel:sync >/dev/null 2>&1
 ```
@@ -122,7 +123,7 @@ Starting from v3.7.0, Koel has a (mobile) remote controller that lets you contro
 
 In order to use the feature:
 
-1. [Register for a Pusher account](https://www.pusher.com) and create an app
+1. [Register a Pusher account](https://www.pusher.com) and create an app
 1. Populate the app's credentials into `.env` (those start with `PUSHER_`)
 1. Reload the desktop Koel instance
 1. Go to http://&lt;your-koel-host&gt;/remote on a mobile device to start controlling remotely. You may also want to add the URL to the home screen for faster access later.
@@ -158,4 +159,4 @@ The continuous development of Koel is made possible thanks to the support of the
     <path fill="#2e3234" d="M103.13 15.175c0-.287-.173-.373-.489-.46-.776-.2-2.156-.46-3.853-.46-4.427 0-7.273 2.214-8.193 7.562l-.374 2.156a11.156 11.156 0 0 0-.144 1.639c0 3.363 1.955 5.893 5.664 5.893 1.696 0 3.019-.23 4.025-.46.403-.086.633-.23.69-.603l.575-3.22v-.115c0-.26-.201-.432-.46-.432h-.057c-1.007.058-1.927.173-3.335.173-.978 0-1.553-.345-1.553-1.639 0-.345.029-.747.115-1.236l.374-2.156c.402-2.387 1.236-2.904 2.472-2.904 1.409 0 2.272.144 3.249.201h.058c.316 0 .603-.23.66-.546l.576-3.249zm17.943-5.663c0-.288-.258-.49-.546-.49h-4.284c-.316 0-.603.26-.66.576l-.863 4.859c-.575-.087-1.553-.202-2.013-.202-5.232 0-7.849 2.185-8.797 7.504l-.403 2.243a9.023 9.023 0 0 0-.144 1.466c0 3.536 2.444 6.037 6.383 6.037 2.587 0 5.031-.402 6.584-.718.92-.202 1.063-.374 1.15-.92l3.594-20.27zm-7.158 9.43l-1.38 7.877c-.547.086-1.15.144-1.984.144-1.236 0-1.667-.719-1.667-1.84 0-.345.028-.719.114-1.121l.403-2.243c.287-1.667.977-2.932 2.587-2.932.69 0 1.352.057 1.927.115zm23.176.2c0-3.22-1.323-4.887-4.514-4.887-1.063 0-2.645.26-4.657 1.582l.144-.748c.086-.431-.115-.575-.49-.575h-3.938c-.316 0-.604.259-.661.575l-2.76 15.525c-.058.403.259.633.661.633h4.111c.432 0 .719-.288.777-.633l1.955-11.126c.517-.288 1.58-.633 2.443-.633.978 0 1.352.23 1.352 1.122 0 .488-.115.977-.202 1.466l-1.61 9.171c-.057.288 0 .633.489.633h4.313c.345 0 .66-.317.718-.633l1.582-8.97c.143-.805.287-1.754.287-2.501z"></path>
 </svg></a>
 
-Want to help as well? Please <a href="mailto:me@phanan.net">drop me an email</a> or [support Koel's development via OpenCollective](https://opencollective.com/koel).
+Want to help as well? You can support Koel's development via [OpenCollective](https://opencollective.com/koel) or [GitHub Sponsors](https://github.com/users/phanan/sponsorship). 
