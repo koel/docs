@@ -36,7 +36,7 @@ php artisan serve
 
 You should now be able to visit [http://localhost:8000](http://localhost:8000) in your browser and start using Koel.
 
-<p class="tip">http://localhost:8000, however, is only the _development_ server for Koel (or rather Laravel). For optimal performance, you'll want to set up the production version, the configuration of which varies depending on your webserver of choice (Apache, Nginx, Caddy etc.) and is outside of this document's scope, but shouldn't be any different from that of a standard PHP application.</p>
+<p class="warning">http://localhost:8000, however, is only the _development_ server for Koel (or rather Laravel). For optimal performance, you'll want to set up the production version, the configuration of which varies depending on your webserver of choice (Apache, Nginx, Caddy etc.) and is outside of this document's scope, but shouldn't be any different from that of a standard PHP application.</p>
 
 If you're on Debian, here's an [unofficial installation guide](https://gist.github.com/bplower/613a99156d603abac083). This may or may not be out of date, so use it with your own risk.
 
