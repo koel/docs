@@ -11,8 +11,8 @@
 Koel has two components, each with its own set of requirements:
 
 ### Server
-* [All requirements by Laravel](https://laravel.com/docs/5.4/installation#server-requirements) – PHP, OpenSSL, [composer](https://getcomposer.org/) and such. Consider setting PHP's `memory_limit` to a good value (512M or better) if you have a big library.
-* MySQL or MariaDB. Actually, any DBMS supported by Laravel should work.
+* [All requirements by Laravel](https://laravel.com/docs/5.8/installation#server-requirements) – PHP, OpenSSL, [composer](https://getcomposer.org/) and such. Consider setting PHP's `memory_limit` to a good value (512M or better) if you have a big library.
+* MySQL, MariaDB, PostgresSQL, or SQLite. Actually, any DBMS supported by Laravel should work.
 * NodeJS latest stable with [`yarn`](https://yarnpkg.com)
 
 ### Client
@@ -25,9 +25,9 @@ Koel has two components, each with its own set of requirements:
 From your console, run the following commands:
 
 ```bash
-cd PUBLIC_DIR
-git clone https://github.com/phanan/koel.git .
-git checkout v3.7.0 # Check out the latest version at https://github.com/phanan/koel/releases
+cd <PUBLIC_WEB_DIRECTORY_FOR_KOEL>
+git clone --recurse-submodules https://github.com/phanan/koel.git .
+git checkout v4.0.0 # Check out the latest version at https://github.com/phanan/koel/releases
 composer install
 php artisan koel:init # Populate credentials during the process
 
@@ -116,6 +116,8 @@ Using the client component of Koel should be straightforward enough. If you've e
 * <kbd>K</kbd> plays the previous song in queue
 * <kbd>Ctrl/Cmd</kbd>+<kbd>A</kbd> selects all songs in the current view
 * <kbd>Delete</kbd> removes selected song(s) from the current queue/playlist
+
+If you're using Chrome > 73, you can control Koel using hardware media keys without even having Koel _or the browser_ focused.
 
 ### Remote Controller
 
