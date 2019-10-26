@@ -132,6 +132,16 @@ In order to use the feature:
 1. Reload the desktop Koel instance
 1. Go to http://&lt;your-koel-host&gt;/remote on a mobile device to start controlling remotely. You may also want to add the URL to the home screen for faster access later.
 
+### Reset Admin Password
+
+Starting from v4.1.1, Koel comes with a handy CLI command to reset the admin password in case you lose it:
+
+```bash
+php artisan koel:admin:change-password
+```
+
+For older versions, you can make use of Laravel's Tinker, as described [here](https://github.com/phanan/koel/issues/1107#issuecomment-542783495).
+
 ## Mobile Support and Limitation
 
 The client component of Koel has a responsive GUI that works fairly well on a mobile device. Certain functionalities are not available, however, some due to technology limitation, some my incompetence. For instance:
