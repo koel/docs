@@ -1,4 +1,4 @@
-self.$config = {
+docute.init({
   title: 'Koel',
   repo: 'phanan/koel',
   twitter: 'notphanan',
@@ -18,4 +18,4 @@ self.$config = {
     { title: 'Use with Amazon S3', path: '/aws-s3' },
     { title: 'Troubleshooting', path: '/troubleshooting' }
   ]
-}
+})
