@@ -52,6 +52,16 @@ Solution: Actually, no solution yet. This is a limitation for mobile browsers. A
 
 <p class="tip">Starting from v3.6.0, on Android and with Chrome 57 and newer, playback can now be controlled via the notification center and lock screen, [like this](https://twitter.com/notphanan/status/845849511134031872). This also appears to remove the limitation above.</p>
 
+#### Chinese songs name split wrong, like "下班以后-刘德华.mp3" will cut to "-刘德华.mp3"
+
+Solution: php `basename()` function use local langaue `LC_LOACL`, simplified chinese need set to `zh_CN.UTF-8` . If you use in docker, you can add this in your Dockerfile, and rescan music.
+```
+ENV LANG=zh_CN.UTF-8 \
+    LANGUAGE=zh_CN:zh \
+    LC_ALL=zh_CN.UTF-8
+RUN localedef -c -f UTF-8 -i zh_CN zh_CN.UTF-8
+```
+
 ## For Koel-AWS
 
 There's nothing here yet (and that's a good thing!)
