@@ -1,16 +1,22 @@
+---
+sidebar: auto
+---
+
 # Watch Your Media Folder
 
 ## Introduction
 
 Starting from v2.1.0, Koel provides a mean to help watch your media directory and trigger _selective_ synchronization every time there's a change to it. With this you don't have to run a whole time-consuming `koel:sync` process for just one added song. The actual watching is done by [inotifywait](http://linux.die.net/man/1/inotifywait), a popular filesystem watcher for Linux – sorry Mac and Windows folks.
 
-<p class="warning">Though, in theory, you can watch _any_ directory other than or outside of your media root, it's not recommended, as the next manual `php artisan koel:sync` call will simply remove all those "invalid" entries.</p>
+:::warning Only watch the media directory
+In theory, you can watch _any_ directory other than or outside of your media root. It's not recommended, however, as the next manual `php artisan koel:sync` call will simply remove all those "invalid" entries.
+:::
 
 ## Installation
 
 In order to start using the feature, follow these steps:
 
-### 1. Install inotify Tools
+### 1. Install `inotify` Tools
 
 On CentOS for example, you can run this shell command:
 
@@ -44,4 +50,4 @@ $ disown -h
 ```
 ### 4. Verify
 
-You can now verify that it works by `tail -f storage/logs/laravel.log` while doing changes to your media directory.
+You can now verify that it works by `tail -f storage/logs/laravel.log` while making changes to your media directory.

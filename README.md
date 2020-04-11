@@ -4,4 +4,8 @@ The official documentation/wiki for [Koel](https://koel.phanan.net/).
 
 ### Build
 
-To buid the docs, install [docute](https://github.com/egoist/docute) and run `docute .` from the project's root folder.
+```bash
+yarn install
+yarn dev   # development
+yarn build # production build 
+```
