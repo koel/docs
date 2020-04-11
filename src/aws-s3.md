@@ -75,11 +75,11 @@ Under `koel-bucket` "Events" section, create an event with the following details
 
 ### 4. Configure Koel to be able to stream from S3
 
-If everything works properly (and it should!) you can now upload media files to the bucket and they should appear in Koel. To play them, just populate `koel-user`'s `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_REGION` into your Koel's `.env` file.
+If everything works properly, you can now upload media files to the bucket and they should appear in Koel. Now after you populate `koel-user`'s `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_REGION` into your Koel's `.env` file, Koel will start streaming media from your S3.
 
 ### 5. ☕️
 
-You've made it! Now go make some coffee, lay back, and enjoy the melodies.
+You did it! Now go make some coffee, lay back, and enjoy the melodies.
 
 ## Contribution
 
