@@ -1,6 +1,6 @@
 # koel-docs
 
-The official documentation/wiki for [Koel](https://koel.phanan.net/).
+The official documentation/wiki for [Koel](https://koel.dev/).
 
 ### Build
 
