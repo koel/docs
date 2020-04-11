@@ -100,9 +100,6 @@ typings/
 # nuxt.js build output
 .nuxt
 
-# vuepress build output
-.vuepress/dist
-
 # Serverless directories
 .serverless/
 
@@ -132,3 +129,5 @@ tags
 [._]*.un~
 
 # End of https://www.gitignore.io/api/vim,node,macos
+
+dist

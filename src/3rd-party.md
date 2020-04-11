@@ -1,3 +1,7 @@
+---
+sidebar: auto
+---
+
 # 3rd-Party Integrations
 
 Out of the box, Koel supports several (non-mandatory) 3rd-party integrations which should (helpfully) enhance your experience. They are…
@@ -18,14 +22,22 @@ With YouTube integration, whenever a song is played, Koel will search YouTube fo
 2. From the project's Dashboard, click “ENABLE API” and make sure “YouTube Data API v3” is enabled
 3. From the project's Credentials, click Create credentials → API Key → Server key
 
-<p class="warning">
+:::warning Limitations
 YouTube integration is always disabled on mobile due to OS restrictions. Also, you interact with the videos via their own controls and not Koel's. Koel's equalizer, volume, seeker, play/pause buttons etc. will _not_ work in this context.
-</p>
+:::
 
 ## iTunes
 
 If you have Last.fm integrated, available album information and tracklist will be displayed in the sidebar every time a song is played. Tracks missing from your library will have a link allowing you to purchase them directly on iTunes.
 
-<img src="https://cloud.githubusercontent.com/assets/8056274/21960297/b9184d66-db20-11e6-853b-a02b99b05a65.png" alt="Track Listing Before and After" width="668" style="max-width: 100%" />
+![Track listing changes](./assets/img/track-listing.png#track-listing)
 
-<p class="warning">These links are associated with my (Phan An's) iTunes affiliate account, which means I'd earn _several cents_ each time you buy a track from Apple. I don't know yet how it will work out (if at all), though, so this is very experimental and may be removed without notice in the future.</p>
+These links are associated with my (Phan An's) iTunes affiliate account, which means I'd earn _several cents_ each time you buy a track from Apple. I don't know yet how it will work out (if at all), though, so this is very experimental and may be removed without notice in the future.
+
+
+<style>
+img[src*="#track-listing"] {
+  width: 668px;
+  height: auto;
+}
+</style>

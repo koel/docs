@@ -1,4 +1,8 @@
-# Use Koel with AWS S3
+---
+sidebar: auto
+---
+
+# Host Media Files on S3
 
 Starting from version v3.0.0, Koel can work seamlessly with Amazon S3 with the help of [the official Koel-AWS package](https://github.com/koel/koel-aws). This allows you to run Koel in your server and have all media files hosted by Amazon, and save yourself some good hosting fee.
 
@@ -6,16 +10,15 @@ Starting from version v3.0.0, Koel can work seamlessly with Amazon S3 with the h
 
 The easiest way to understand Koel-AWS approach is to take a look at this awesomely-drawn diagram:
 
-<br>
-<p>
-<img src="https://cdn.rawgit.com/koel/koel-aws/master/assets/diagram.svg?v2"/>
-</p>
+![Amazon S3 flow](./assets/img/s3-flow.svg)
 
 ## Supports and Requirements
 
 As of current, only `mp3`, `ogg`, and `m4a` files are supported. Also, your Koel version must be v3.0.0 or later.
 
-<p class="warning">You're expected to know your way around AWS's console, which, let's be honest here, can use some UX improvements. If you're stuck with an AWS-specific command, Google is your friend.</p>
+:::warning AWS knowledge required
+You're expected to know your way around AWS's console, which, let's be honest here, can use some UX improvements. If you're stuck with an AWS-specific command, Google is your friend.
+:::
 
 ## Step-by-Step Installation
 
@@ -55,7 +58,9 @@ As of current, only `mp3`, `ogg`, and `m4a` files are supported. Also, your Koel
     Timeout: 0min 10sec
     VPC: "No VPC" should be fine
     ```
-<p class="warning">Make sure you're creating the function in the same region with `koel-bucket`.</p>
+:::warning AWS region
+Make sure you're creating the function in the same region with `koel-bucket`.
+:::
 
 ### 3. Configure S3 to send events to Lambda
 

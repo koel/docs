@@ -1,6 +1,10 @@
-# Koel
+---
+sidebar: auto
+---
 
-![Showcase](https://koel.phanan.net/dist/img/showcase.png)
+# Home
+
+![Showcase](./assets/img/showcase.png)
 
 ## Introduction
 
@@ -11,11 +15,13 @@
 Koel has two components, each with its own set of requirements:
 
 ### Server
+
 * [All requirements by Laravel](https://laravel.com/docs/5.8/installation#server-requirements) – PHP, OpenSSL, [composer](https://getcomposer.org/) and such. Consider setting PHP's `memory_limit` to a good value (512M or better) if you have a big library.
 * MySQL, MariaDB, PostgresSQL, or SQLite. Actually, any DBMS supported by Laravel should work.
 * NodeJS latest stable with [`yarn`](https://yarnpkg.com)
 
 ### Client
+
 * Any decent web browser will do – Koel has been tested on Chrome 47, Firefox 42, Safari 8, Opera 34, and Edge.
 
 ## Installation
@@ -36,13 +42,15 @@ php artisan serve
 
 You should now be able to visit [http://localhost:8000](http://localhost:8000) in your browser and start using Koel.
 
-<p class="warning">http://localhost:8000, however, is only the _development_ server for Koel (or rather Laravel). For optimal performance, you'll want to set up the production version, the configuration of which varies depending on your webserver of choice (Apache, Nginx, Caddy etc.) and is outside of this document's scope, but shouldn't be any different from that of a standard PHP application.</p>
+:::warning Use a proper webserver
+http://localhost:8000 is only the _development_ server for Koel (or rather, Laravel). For optimal performance, you'll want to set up the production version, the configuration of which varies depending on your webserver of choice (Apache, Nginx, Caddy etc.) and is outside of this document's scope, but shouldn't be any different from that of a standard PHP application.</p>
+:::
 
 If you're on Debian, here's an [unofficial installation guide](https://gist.github.com/bplower/613a99156d603abac083). This may or may not be out of date, so use it with your own risk.
 
 If you want more control, edit `.env` file. There's quite a few settings there to tweak Koel to your needs. Remember to reload the server for the changes to take effects.
 
-### With Docker
+### Docker
 
 Koel doesn't maintain an official Docker image, but community-supported ones like [hyzual/koel](https://hub.docker.com/r/hyzual/koel/), [0xcaff/koel](https://hub.docker.com/r/0xcaff/koel/), and [binhex/arch-koel](https://hub.docker.com/r/binhex/arch-koel/) are available.
 
@@ -53,9 +61,10 @@ Check out [Releases](https://github.com/phanan/koel/releases) for upgrade guides
 ## Configuration and Usage
 
 ### Scanning for Music
+
 Koel is simple. It doesn't handle uploading. It doesn't stream from Spotify. Instead, you upload your songs into a readable directory on your server – preferably outside of your web root dir – and configure Koel to scan and sync it. Such configuration can be found under Manage -> Settings.
 
-![](https://koel.phanan.net/dist/img/settings.png)
+![Settings Screen](./assets/img/settings.png)
 
 You can also scan from the CLI – which is faster, without a time limit, and provides feedbacks – with the artisan `koel:sync` command:
 
@@ -72,7 +81,7 @@ Suffix the command with a `-v` flag for more details e.g. syncing errors.
 
 This command can also be added as a cron job, for example to run every midnight:
 
-```
+```bash
 0 0 * * * cd /home/user/webapps/koel/ && /usr/local/bin/php70 artisan koel:sync >/dev/null 2>&1
 ```
 
@@ -80,9 +89,13 @@ As of current, Koel recognizes these audio extensions: `.mp3`, `.ogg`, `.m4a` (e
 
 If you're syncing compilation albums (albums with multiple songs from different artists) make sure the "Band" tag is set, otherwise each song will end up in its own album. Some ripping software sets this automatically; make sure yours does.
 
-<p class="tip">Starting from v2.1.0, you can <a router-link="/watch">watch a directory</a> and sync on the fly with `inotifywait`.</p>
+:::tip Watch a directory
+Starting from v2.1.0, you can <a router-link="/watch">watch a directory</a> and sync on the fly with `inotifywait`.
+:::
 
-<p class="tip">Starting from v3.0.0, you can <a router-link="/aws-s3">use Koel with Amazon S3</a>.</p>
+:::tip Host your media on Amazon S3
+Starting from v3.0.0, you can <a router-link="/aws-s3">use Koel with Amazon S3</a>.
+:::
 
 ### Streaming Music
 
@@ -91,7 +104,7 @@ Koel supports three streaming methods which can be configured via a `STREAMING_M
 * `php`: Use native PHP `readfile()`. This is the default method, and the slowest and most unstable one. **Only use this method if you can't others.**
 * `x-sendfile`: Use Apache's [mod_xsendfile](https://tn123.org/mod_xsendfile/) module. You'll need to install and configure the module manually. A sample configuration is as following:
 
-    ``` apacheconf
+    ```ApacheConf
     LoadModule xsendfile_module   libexec/apache2/mod_xsendfile.so
 
     # These configuration can be put in the VirtualHost directive as well
@@ -103,7 +116,9 @@ Koel supports three streaming methods which can be configured via a `STREAMING_M
 
 * `x-accel-redirect`: Use nginx's [X-Accel](https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/) module. Refer to [`nginx.conf.example`](https://github.com/phanan/koel/blob/master/nginx.conf.example) for a sample nginx configuration file.
 
-<p class="warning">`STREAMING_METHOD` doesn't have effects if you're serving songs from Amazon S3.</p>
+:::warning Notice
+`STREAMING_METHOD` doesn't have effects if you're serving songs from Amazon S3.
+:::
 
 ### Using the Web Interface
 
@@ -123,7 +138,7 @@ If you're using Chrome > 73, you can control Koel using hardware media keys with
 
 Starting from v3.7.0, Koel has a (mobile) remote controller that lets you control a desktop instance – play/pause, navigate, turn volume up/down, and add/remove from Favorites.
 
-<img src="https://user-images.githubusercontent.com/8056274/33527904-c8ef579e-d858-11e7-84cf-1b85e18e9841.png" alt="Remote controller screenshot" width=320>
+![Remote controller screenshot](./assets/img/remote.png#remote-controller)
 
 In order to use the feature:
 
@@ -174,3 +189,11 @@ The continuous development of Koel is made possible thanks to the support of the
 </svg></a>
 
 Want to help as well? You can support Koel's development via [OpenCollective](https://opencollective.com/koel) or [GitHub Sponsors](https://github.com/users/phanan/sponsorship). 
+
+
+<style>
+img[src*="#remote-controller"] {
+   width: 320px;
+   height: auto;
+}
+</style>

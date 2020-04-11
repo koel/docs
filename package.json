@@ -1,0 +1,16 @@
+{
+  "name": "koel-docs",
+  "version": "1.0.0",
+  "description": "Official Documentation for Koel",
+  "main": "index.js",
+  "repository": "git@github.com:koel/docs.git",
+  "author": "Phan An <me@phanan.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.4.0"
+  },
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  }
+}
