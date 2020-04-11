@@ -15,5 +15,6 @@ module.exports = {
     docsRepo: 'koel/docs',
     docsDir: 'src',
     editLinks: true,
-  }
+  },
+  dest: 'dist'
 }
