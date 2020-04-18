@@ -16,11 +16,11 @@ The easiest way to understand Koel-AWS approach is to take a look at this awesom
 
 As of current, only `mp3`, `ogg`, and `m4a` files are supported. Also, your Koel version must be v3.0.0 or later.
 
+## Step-by-Step Installation
+
 :::warning AWS knowledge required
 You're expected to know your way around AWS's console, which, let's be honest here, can use some UX improvements. If you're stuck with an AWS-specific command, Google is your friend.
 :::
-
-## Step-by-Step Installation
 
 ### 1. Prepare S3 for streaming
 
@@ -80,7 +80,3 @@ If everything works properly, you can now upload media files to the bucket and t
 ### 5. ☕️
 
 You did it! Now go make some coffee, lay back, and enjoy the melodies.
-
-## Contribution
-
-I'm not an AWS expert, nor do I ever want to be one. If you spot any problem with the code or have a better idea, [do reach out](https://github.com/koel/koel-aws/issues/new).
