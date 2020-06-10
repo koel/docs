@@ -44,7 +44,7 @@ Wrap the string in quotes and you're set.
 
 #### The song stops playing and you receive a `Failed to load resource: net::ERR_CONTENT_LENGTH_MISMATCH` error
 
-Solution: This usually happens with the native `php` <a router-link="/home?id=streaming-music">streaming method</a>. Opt for a `x-sendfile` or `x-accel-redirect` if possible.
+Solution: This usually happens with the native `php` <router-link to="/home?id=streaming-music">streaming method</router-link>. Opt for a `x-sendfile` or `x-accel-redirect` if possible.
 
 #### Song preloading doesn't work properly
 

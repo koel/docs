@@ -8,7 +8,7 @@ sidebar: auto
 
 ## Introduction
 
-[**Koel**](https://koel.phanan.net) (also styled as **koel**, with a lowercase k) is a simple web-based personal audio streaming service written in [Vue](https://vuejs.org/) at the client side and [Laravel](https://laravel.com/) on the server side. Targeting web developers, Koel embraces some of the more modern web technologies – flexbox, audio and drag-and-drop API to name a few – to do its job.
+[**Koel**](https://koel.phanan.net) (also styled as **koel**, with a lowercase k) is a web-based personal audio streaming service written in [Vue](https://vuejs.org/) at the client side and [Laravel](https://laravel.com/) on the server side. Targeting web developers, Koel embraces some of the more modern web technologies – flexbox, audio and drag-and-drop API to name a few – to do its job.
 
 ## Requirements
 
@@ -60,9 +60,13 @@ Check out [Releases](https://github.com/phanan/koel/releases) for upgrade guides
 
 ## Configuration and Usage
 
-### Scanning for Music
+### Music Discovery
 
-Koel is simple. It doesn't handle uploading. It doesn't stream from Spotify. Instead, you upload your songs into a readable directory on your server – preferably outside of your web root dir – and configure Koel to scan and sync it. Such configuration can be found under Manage -> Settings.
+There are several ways for Koel to discover your media files. You can manually scan for songs, configure a watcher, host your files with Amazon S3, or upload files directly using the web interface.
+
+#### Scan for Songs
+
+The default music discovery method. Upload your songs into a readable directory on your server – preferably outside of your web root dir – and configure Koel to scan and sync it by setting a "media path" under Manage ▸ Settings.
 
 ![Settings Screen](./assets/img/settings.png)
 
@@ -89,13 +93,14 @@ As of current, Koel recognizes these audio extensions: `.mp3`, `.ogg`, `.m4a` (e
 
 If you're syncing compilation albums (albums with multiple songs from different artists) make sure the "Band" tag is set, otherwise each song will end up in its own album. Some ripping software sets this automatically; make sure yours does.
 
-:::tip Watch a directory
-Starting from v2.1.0, you can <a router-link="/watch">watch a directory</a> and sync on the fly with `inotifywait`.
-:::
+#### Watch a directory
+Starting from v2.1.0, you can <router-link to="/watch">watch a directory</router-link> and sync on the fly with `inotifywait`.
 
-:::tip Host your media on Amazon S3
-Starting from v3.0.0, you can <a router-link="/aws-s3">use Koel with Amazon S3</a>.
-:::
+#### Host your media on Amazon S3
+Starting from v3.0.0, you can <router-link to="/aws-s3">use Koel with Amazon S3</router-link>.
+
+#### Upload using the web interface
+Starting from v4.3.0, if you're logged in as an admin, you can upload songs directly by clicking the "Upload" sidebar menu item. Note that you need to set the media path first, as songs will be uploaded into a `%media_path%/__KOEL__UPLOADS___` directory.
 
 ### Streaming Music
 
