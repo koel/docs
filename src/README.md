@@ -10,6 +10,23 @@ sidebar: auto
 
 [**Koel**](https://koel.phanan.net) (also styled as **koel**, with a lowercase k) is a web-based personal audio streaming service written in [Vue](https://vuejs.org/) at the client side and [Laravel](https://laravel.com/) on the server side. Targeting web developers, Koel embraces some of the more modern web technologies – flexbox, audio and drag-and-drop API to name a few – to do its job.
 
+## Quickstart
+
+### New install
+
+Make sure your server has php with the standard extensions installed ([Laravel requirements](https://laravel.com/docs/5.8/installation#server-requirements) and php-sqlite)
+
+1. Download the latest zip or tar.gz from the releases page
+2. Unzip/untar into a web directory on your server
+3. Create an empty file called koel.db
+4. run 'php artisan koel:init --no-assets'
+5. When choosing db select `sqlite` and for db name enter `koel.db`
+
+### Upgrading
+
+1. Download the latest zip or tar.gz from the releases page
+2. Unzip/untar into the web directory on your server
+
 ## Requirements
 
 Koel has two components, each with its own set of requirements:
