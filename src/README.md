@@ -8,7 +8,7 @@ sidebar: auto
 
 ## Introduction
 
-[**Koel**](https://koel.phanan.net) (also styled as **koel**, with a lowercase k) is a web-based personal audio streaming service written in [Vue](https://vuejs.org/) at the client side and [Laravel](https://laravel.com/) on the server side. Targeting web developers, Koel embraces some of the more modern web technologies – flexbox, audio and drag-and-drop API to name a few – to do its job.
+[**Koel**](https://koel.dev) (also styled as **koel**, with a lowercase k) is a web-based personal audio streaming service written in [Vue](https://vuejs.org/) at the client side and [Laravel](https://laravel.com/) on the server side. Targeting web developers, Koel embraces some of the more modern web technologies – flexbox, audio and drag-and-drop API to name a few – to do its job.
 
 ## Requirements
 
@@ -43,7 +43,7 @@ php artisan serve
 You should now be able to visit [http://localhost:8000](http://localhost:8000) in your browser and start using Koel.
 
 :::warning Use a proper webserver
-http://localhost:8000 is only the _development_ server for Koel (or rather, Laravel). For optimal performance, you'll want to set up the production version, the configuration of which varies depending on your webserver of choice (Apache, Nginx, Caddy etc.) and is outside of this document's scope, but shouldn't be any different from that of a standard PHP application.</p>
+http://localhost:8000 is only the _development_ server for Koel (or rather, Laravel). For optimal performance, you'll want to set up the production version, the configuration of which varies depending on your webserver of choice (Apache, nginx, Caddy etc.) and is outside of this document's scope, but shouldn't be any different from that of a standard PHP application.</p>
 :::
 
 If you're on Debian, here's an [unofficial installation guide](https://gist.github.com/bplower/613a99156d603abac083). This may or may not be out of date, so use it with your own risk.
@@ -86,7 +86,7 @@ Suffix the command with a `-v` flag for more details e.g. syncing errors.
 This command can also be added as a cron job, for example to run every midnight:
 
 ```bash
-0 0 * * * cd /home/user/webapps/koel/ && /usr/local/bin/php70 artisan koel:sync >/dev/null 2>&1
+0 0 * * * cd /home/user/webapps/koel/ && /usr/local/bin/php artisan koel:sync >/dev/null 2>&1
 ```
 
 As of current, Koel recognizes these audio extensions: `.mp3`, `.ogg`, `.m4a` (experimental), and `.flac` (experimental with some limitations). Others may be added in the future.
@@ -141,7 +141,7 @@ Using the client component of Koel should be straightforward enough. If you've e
 * <kbd>Ctrl/Cmd</kbd>+<kbd>A</kbd> selects all songs in the current view
 * <kbd>Delete</kbd> removes selected song(s) from the current queue/playlist
 
-If you're using Chrome > 73, you can control Koel using hardware media keys without even having Koel _or the browser_ focused.
+On a modern Chromium-based browser, you can control Koel using hardware media keys without even having Koel _or the browser_ focused.
 
 ### Remote Controller
 
