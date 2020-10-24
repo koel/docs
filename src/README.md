@@ -175,7 +175,7 @@ Koel's fully responsive GUI works fairly well on a mobile device. Certain functi
 * Volume must be controlled from a system level
 * Next and previous songs can't be controlled from Control Center or lock screen
 
-Also, since [Safari is the new IE](https://www.safari-is-the-new-ie.com/), if you're on iOS, it's strongly advised to use Koel with a non-Safari browser such as Firefox, Edge, Brave, or Chrome. iOS 14 comes with the ability to change the default browser as well.
+Also, since [Safari is the new IE](https://www.safari-is-the-new-ie.com/), if you're on iOS, it's strongly advised to use Koel with a non-Safari browser such as [Firefox](https://apps.apple.com/us/app/firefox-private-safe-browser/id989804926), [Microsoft Edge](https://apps.apple.com/us/app/microsoft-edge/id1288723196), [Brave](https://apps.apple.com/us/app/brave-vpn-private-web-browser/id1052879175), or [Google Chrome](https://apps.apple.com/us/app/google-chrome/id535886823). iOS 14 comes with the ability to change the default browser as well.
 
 ## Contribution
 
