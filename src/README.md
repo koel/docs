@@ -168,15 +168,14 @@ For older versions, you can make use of Laravel's Tinker, as described [here](ht
 
 ## Mobile Support and Limitation
 
-The client component of Koel has a responsive GUI that works fairly well on a mobile device. Certain functionalities are not available, however, some due to technology limitation, some my incompetence. For instance:
+Koel's fully responsive GUI works fairly well on a mobile device. Certain functionalities are not available (yet), however:
 
 * Shortcut keys don't work (duh)
 * Equalizer may *not* work
 * Volume must be controlled from a system level
-* ~~Next songs can't be played automatically if the browser is minimized, or if the device is locked~~ Update: On iOS, it appears that Google Chrome can still play next songs even if the device is locked, as long as the browser remains maximized.
 * Next and previous songs can't be controlled from Control Center or lock screen
 
-If you know how to fix these issues and enhance Koel's experience, read on.
+Also, since [Safari is the new IE](https://www.safari-is-the-new-ie.com/), if you're on iOS, it's strongly advised to use Koel with a non-Safari browser such as Firefox, Edge, Brave, or Chrome. iOS 14 comes with the ability to change the default browser as well.
 
 ## Contribution
 
