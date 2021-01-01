@@ -141,7 +141,7 @@ Using the client component of Koel should be straightforward enough. If you've e
 * <kbd>Ctrl/Cmd</kbd>+<kbd>A</kbd> selects all songs in the current view
 * <kbd>Delete</kbd> removes selected song(s) from the current queue/playlist
 
-On a modern Chromium-based browser, you can control Koel using hardware media keys without even having Koel _or the browser_ focused.
+On modern Chromium-based or Firefox browsers, you can control Koel using hardware media keys without even having Koel _or the browser_ focused.
 
 ### Remote Controller
 
