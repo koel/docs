@@ -31,7 +31,7 @@ Koel has two components, each with its own set of requirements:
 From your console, run the following commands:
 
 ```bash
-cd <PUBLIC_WEB_DIRECTORY_FOR_KOEL>
+cd <KOEL_ROOT_DIR>
 git clone --recurse-submodules https://github.com/koel/koel.git .
 git checkout latest # Check out the latest version at https://github.com/koel/koel/releases
 composer install
