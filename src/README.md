@@ -258,7 +258,7 @@ If you're already running `yarn test:e2e`, there's no need to start a dev server
 
 ## Credits
 
-Koel is built on the shoulder of the giants. My sincere thanks go to the guys behind Vue, Laravel, as well as all JavaScript and PHP packages used in the project.
+Koel is built on the shoulder of the giants. My sincere thanks go to the folks behind Vue, Laravel, as well as all JavaScript and PHP packages used in the project.
 
 ## Sponsors and Support
 
