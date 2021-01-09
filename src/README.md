@@ -100,7 +100,7 @@ Starting from v2.1.0, you can <router-link to="/watch">watch a directory</router
 Starting from v3.0.0, you can <router-link to="/aws-s3">use Koel with Amazon S3</router-link>.
 
 #### Upload using the web interface
-Starting from v4.3.0, if you're logged in as an admin, you can upload songs directly by clicking the "Upload" sidebar menu item. Note that you need to set the media path first, as songs will be uploaded into a `%media_path%/__KOEL__UPLOADS___` directory.
+Starting from v4.3.0, if you're logged in as an admin, you can upload songs directly by clicking the "Upload" sidebar menu item. Note that you need to set the media path first, as songs will be uploaded into a `%media_path%/__KOEL__UPLOADS__` directory.
 
 ::: tip Tip
 Depending on how big your media files are, you may want to set `upload_max_filesize` and `post_max_size` in your `php.ini` correspondingly, or PHP may fail with a `Payload too large` error. 
