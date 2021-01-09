@@ -16,7 +16,7 @@ Koel has two components, each with its own set of requirements:
 
 ### Server
 
-* [All requirements by Laravel](https://laravel.com/docs/5.8/installation#server-requirements) – PHP, OpenSSL, [composer](https://getcomposer.org/) and such. Consider setting PHP's `memory_limit` to a good value (512M or better) if you have a big library.
+* [All requirements by Laravel](https://laravel.com) – PHP, OpenSSL, [composer](https://getcomposer.org/) and such. Consider setting PHP's `memory_limit` to a good value (512M or better) if you have a big library.
 * MySQL, MariaDB, PostgresSQL, or SQLite. Actually, any DBMS supported by Laravel should work.
 * NodeJS latest stable with [`yarn`](https://yarnpkg.com)
 
