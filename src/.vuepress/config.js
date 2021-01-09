@@ -10,7 +10,7 @@ module.exports = {
       { text: 'Troubleshooting', link: '/troubleshooting' }
     ],
     logo: '/logo.svg',
-    repo: 'phanan/koel',
+    repo: 'koel/koel',
     repoLabel: 'GitHub',
     docsRepo: 'koel/docs',
     docsDir: 'src',
