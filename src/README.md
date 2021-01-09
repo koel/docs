@@ -32,8 +32,8 @@ From your console, run the following commands:
 
 ```bash
 cd <PUBLIC_WEB_DIRECTORY_FOR_KOEL>
-git clone --recurse-submodules https://github.com/phanan/koel.git .
-git checkout v4.0.0 # Check out the latest version at https://github.com/phanan/koel/releases
+git clone --recurse-submodules https://github.com/koel/koel.git .
+git checkout latest # Check out the latest version at https://github.com/koel/koel/releases
 composer install
 php artisan koel:init # Populate credentials during the process
 
@@ -56,7 +56,7 @@ Koel doesn't maintain an official Docker image, but community-supported ones lik
 
 ## Upgrade
 
-Check out [Releases](https://github.com/phanan/koel/releases) for upgrade guides corresponding to your Koel version.
+Check out [Releases](https://github.com/koel/koel/releases) for upgrade guides corresponding to your Koel version.
 
 ## Configuration and Usage
 
@@ -123,7 +123,7 @@ Koel supports three streaming methods which can be configured via a `STREAMING_M
     </IfModule>
     ```
 
-* `x-accel-redirect`: Use nginx's [X-Accel](https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/) module. Refer to [`nginx.conf.example`](https://github.com/phanan/koel/blob/master/nginx.conf.example) for a sample nginx configuration file.
+* `x-accel-redirect`: Use nginx's [X-Accel](https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/) module. Refer to [`nginx.conf.example`](https://github.com/koel/koel/blob/master/nginx.conf.example) for a sample nginx configuration file.
 
 :::warning Notice
 `STREAMING_METHOD` doesn't have effects if you're serving songs from Amazon S3.
@@ -142,6 +142,28 @@ Using the client component of Koel should be straightforward enough. If you've e
 * <kbd>Delete</kbd> removes selected song(s) from the current queue/playlist
 
 On a modern Chromium-based browser, you can control Koel using hardware media keys without even having Koel _or the browser_ focused.
+
+### Instant Search
+
+Starting from v5.0.0, Koel provides an instant search feature, which perform full-text, fuzzy matches against your database of songs, albums, and artists. By default, Koel uses the [TNTSearch engine](https://github.com/teamtnt/tntsearch), which requires no configuration. You can also use [Algolia](https://www.algolia.com/) by populating these details into `.env`:
+
+```
+SCOUT_DRIVER=algolia
+ALGOLIA_APP_ID=<your-algolia-app-id>
+ALGOLIA_APP_ID=<your-algolia-secret>
+```
+
+If you're upgrading Koel from an older version, you'll also have to create the search indices manually by running this command:
+
+```bash
+php artisan koel:search:import
+```
+
+All subsequent updates to the music database will be synchronized automatically.
+
+### Upload Artist and Album Images
+
+You can change the artist and album images by dragging and dropping images into the current images in artist/album cards.
 
 ### Remote Controller
 
@@ -164,7 +186,7 @@ Starting from v4.1.1, Koel comes with a handy CLI command to reset the admin pas
 php artisan koel:admin:change-password
 ```
 
-For older versions, you can make use of Laravel's Tinker, as described [here](https://github.com/phanan/koel/issues/1107#issuecomment-542783495).
+For older versions, you can make use of Laravel's Tinker, as described [here](https://github.com/koel/koel/issues/1107#issuecomment-542783495).
 
 ## Mobile Support and Limitation
 
@@ -177,9 +199,62 @@ Koel's fully responsive GUI works fairly well on a mobile device. Certain functi
 
 Also, since [Safari is the new IE](https://www.safari-is-the-new-ie.com/), if you're on iOS, it's strongly advised to use Koel with a non-Safari browser such as [Firefox](https://apps.apple.com/us/app/firefox-private-safe-browser/id989804926), [Microsoft Edge](https://apps.apple.com/us/app/microsoft-edge/id1288723196), [Brave](https://apps.apple.com/us/app/brave-vpn-private-web-browser/id1052879175), or [Google Chrome](https://apps.apple.com/us/app/google-chrome/id535886823). iOS 14 comes with the ability to change the default browser as well.
 
-## Contribution
+## Local Development
 
-I decided to write Koel out of my desperation of not being able to find a decent _and_ simple streaming service that fits my needs. This is my very first hands-on with Vue and ES6, and the code must smell so bad. So, **any** contribution is much appreciated. Bug reports? Bug fixes? Code optimization? Tests? Ideas? Documentation? Please [send them over](https://github.com/phanan/koel/issues/new).
+### Running the Local Webserver
+
+Since Koel makes use of [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules), you'll want to make sure the submodule is up-to-date:
+
+```bash
+git pull
+git submodule update --init --recursive --remote
+
+# install the submodule dependencies
+cd resources/assets
+yarn install
+```
+
+To start the **PHP dev server**, which serves as the API of the application, run the following command from the root directory. By default, the server will listen at port `8000`.
+
+```bash
+php artisan serve
+```
+
+For the **client application** itself, run this command:
+
+```bash
+yarn hot
+```
+
+A development version of Koel should now be available at `http://localhost:8080` with full support for hot module reloading.
+
+Alternatively, you can start both the PHP server and the client application in one go with `yarn dev`, which uses [`start-server-and-test`](https://github.com/bahmutov/start-server-and-test) under the hood.
+
+### Testing, Linting, Static Analysis and Stuff
+
+```bash
+# PHP-related code quality tasks
+# Basically, take a look at the "scripts" section in composer.json
+composer test        # Run the PHP test suite
+composer cs          # Run code style checker
+composer cs:fix      # Run code style fixer 
+composer analyze     # Run PHP static analysis
+
+yarn build # Build a production version of the client application
+
+# Client/E2E code quality tasks
+# You may want to run `yarn build` first.
+yarn test:e2e        # Run the Cypress test suite interactively
+yarn test:e2e:ci     # Run the Cypress test suite non-interactively (CI mode)
+# These commands need to be run from within the submodule (resources/assets)
+yarn lint            # Lint
+yarn type-check      # TypeScript type checking
+yarn test            # Unit testing
+```
+
+::: tip 
+If you're already running `yarn test:e2e`, there's no need to start a dev server. `yarn test:e2e` calls `yarn dev` internally and will eliminate the existing `yarn dev` process, if any. 
+:::
 
 ## Credits
 
