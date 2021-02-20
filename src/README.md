@@ -52,7 +52,7 @@ If you want more control, edit `.env` file. There's quite a few settings there t
 
 ### Docker
 
-Koel doesn't maintain an official Docker image, but community-supported ones like [hyzual/koel](https://hub.docker.com/r/hyzual/koel/), [0xcaff/koel](https://hub.docker.com/r/0xcaff/koel/), and [binhex/arch-koel](https://hub.docker.com/r/binhex/arch-koel/) are available.
+Koel doesn't maintain an official Docker image, but community-supported ones like [hyzual/koel](https://hub.docker.com/r/hyzual/koel/) and [0xcaff/koel](https://hub.docker.com/r/0xcaff/koel/) are available.
 
 ## Upgrade
 
