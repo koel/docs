@@ -18,7 +18,7 @@ Koel has two components, each with its own set of requirements:
 
 * [All requirements by Laravel](https://laravel.com) – PHP, OpenSSL, [composer](https://getcomposer.org/) and such. Consider setting PHP's `memory_limit` to a good value (512M or better) if you have a big library.
 * MySQL, MariaDB, PostgresSQL, or SQLite. Actually, any DBMS supported by Laravel should work.
-* NodeJS latest stable with [`yarn`](https://yarnpkg.com)
+* If you're [building Koel from source](#building-from-source), make sure to have Git and NodeJS latest stable with [`yarn`](https://yarnpkg.com).
 
 ### Client
 
@@ -26,7 +26,22 @@ Koel has two components, each with its own set of requirements:
 
 ## Installation
 
-### Manually
+There are three methods to install and start using Koel:
+
+### Using a Pre-Compiled Archive
+
+Starting from v5.0.0, Koel supports installing from a pre-compiled archive, which eliminates the need of manually compiling the front-end assets. 
+
+First, go to the [Releases page](https://github.com/koel/koel/releases) on GitHub, download either the `.tar.gz` or `.zip` file found under "Assets," and unzip it into the destination web root directory. From there, run the following commands:
+
+```bash
+composer install
+php artisan koel:init --no-assets # Populate credentials during the process
+
+php artisan serve
+```
+
+### Building from Source
 
 From your console, run the following commands:
 
@@ -35,12 +50,12 @@ cd <KOEL_ROOT_DIR>
 git clone --recurse-submodules https://github.com/koel/koel.git .
 git checkout latest # Check out the latest version at https://github.com/koel/koel/releases
 composer install
-php artisan koel:init # Populate credentials during the process
+php artisan koel:init
 
 php artisan serve
 ```
 
-You should now be able to visit [http://localhost:8000](http://localhost:8000) in your browser and start using Koel.
+In both cases, you should now be able to visit [http://localhost:8000](http://localhost:8000) in your browser and start using Koel.
 
 :::warning Use a proper webserver
 http://localhost:8000 is only the _development_ server for Koel (or rather, Laravel). For optimal performance, you'll want to set up the production version, the configuration of which varies depending on your webserver of choice (Apache, nginx, Caddy etc.) and is outside of this document's scope, but shouldn't be any different from that of a standard PHP application.</p>
@@ -50,13 +65,13 @@ If you're on Debian, here's an [unofficial installation guide](https://gist.gith
 
 If you want more control, edit `.env` file. There's quite a few settings there to tweak Koel to your needs. Remember to reload the server for the changes to take effects.
 
-### Docker
+### Using Docker
 
 Koel doesn't maintain an official Docker image, but community-supported ones like [hyzual/koel](https://hub.docker.com/r/hyzual/koel/), [0xcaff/koel](https://hub.docker.com/r/0xcaff/koel/), and [binhex/arch-koel](https://hub.docker.com/r/binhex/arch-koel/) are available.
 
 ## Upgrade
 
-Check out [Releases](https://github.com/koel/koel/releases) for upgrade guides corresponding to your Koel version.
+Check out [Releases](https://github.com/koel/koel/releases) for upgrade guides corresponding to your Koel version and installation method.
 
 ## Configuration and Usage
 
