@@ -67,7 +67,7 @@ If you want more control, edit `.env` file. There's quite a few settings there t
 
 ### Using Docker
 
-Koel has an official Docker image: [koel/docker-koel](https://github.com/koel/docker-koel), maintained by organization member [Hyzual](https://github.com/Hyzual). Communinity-supported images such as [0xcaff/koel](https://hub.docker.com/r/0xcaff/koel/) and [binhex/arch-koel](https://hub.docker.com/r/binhex/arch-koel/) are also available.
+Koel has an official Docker image: [koel/docker](https://github.com/koel/docker), maintained by organization member [Hyzual](https://github.com/Hyzual). Communinity-supported images such as [0xcaff/koel](https://hub.docker.com/r/0xcaff/koel/) and [binhex/arch-koel](https://hub.docker.com/r/binhex/arch-koel/) are also available.
 
 ## Upgrade
 
