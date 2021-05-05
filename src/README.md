@@ -283,7 +283,7 @@ The continuous development of Koel is made possible thanks to the support from t
 
 [<img :src="$withBase('/sponsors/exoscale.svg')" height="55" alt="Exoscale logo" title="Exoscale: Swiss cloud hosting">](https://www.exoscale.ch)
 
-[<img :src="$withBase('/sponsors/keycdn.svg')" height="44" alt="KeyCDN logo" title="KeyCDN - Content Delivery Made Easy">](https://www.keycdn.com/?a=11519)
+[<img :src="$withBase('/sponsors/keycdn.svg')" height="48" alt="KeyCDN logo" title="KeyCDN - Content Delivery Made Easy">](https://www.keycdn.com/?a=11519)
 
 Want to help out as well? You can support Koel's development via [OpenCollective](https://opencollective.com/koel) or [GitHub Sponsors](https://github.com/users/phanan/sponsorship). 
 
