@@ -165,7 +165,7 @@ Starting from v5.0.0, Koel provides an instant search feature, which perform ful
 ```
 SCOUT_DRIVER=algolia
 ALGOLIA_APP_ID=<your-algolia-app-id>
-ALGOLIA_APP_ID=<your-algolia-secret>
+ALGOLIA_SECRET=<your-algolia-secret>
 ```
 
 If you're upgrading Koel from an older version, you'll also have to create the search indices manually by running this command:
