@@ -2,13 +2,15 @@
 sidebar: auto
 ---
 
-# Home
-
 ![Showcase](./assets/img/showcase.png)
 
 ## Introduction
 
-[**Koel**](https://koel.dev) (also styled as **koel**, with a lowercase k) is a web-based personal audio streaming service written in [Vue](https://vuejs.org/) at the client side and [Laravel](https://laravel.com/) on the server side. Targeting web developers, Koel embraces some of the more modern web technologies – flexbox, audio and drag-and-drop API to name a few – to do its job.
+[**Koel**](https://koel.dev) (also styled as **koel**, with a lowercase k)
+is a web-based personal audio streaming service written in [Vue](https://vuejs.org/) at the client side
+and [Laravel](https://laravel.com/) on the server side.
+Targeting web developers, Koel embraces some of the more modern web technologies –
+flexbox, audio and drag-and-drop API to name a few – to do its job.
 
 ## Requirements
 
@@ -16,13 +18,15 @@ Koel has two components, each with its own set of requirements:
 
 ### Server
 
-* [All requirements by Laravel](https://laravel.com) – PHP, OpenSSL, [composer](https://getcomposer.org/) and such. Consider setting PHP's `memory_limit` to a good value (512M or better) if you have a big library.
-* MySQL, MariaDB, PostgresSQL, or SQLite. Actually, any DBMS supported by Laravel should work.
-* If you're [building Koel from source](#building-from-source), make sure to have Git and NodeJS latest stable with [`yarn`](https://yarnpkg.com).
+* [All requirements by Laravel](https://laravel.com) – PHP, OpenSSL, [composer](https://getcomposer.org/) and such.
+  Consider raising PHP's `memory_limit` to 512M or more if you have a big library.
+* MySQL, MariaDB, PostgresSQL, SQLite... - any DBMS supported by Laravel should work.
+* If you are [building Koel from source](#building-from-source), make sure to have Git and NodeJS latest stable with [`yarn`](https://yarnpkg.com).
 
 ### Client
 
-* Any decent web browser will do – Koel has been tested on Chrome 47, Firefox 42, Safari 8, Opera 34, and Edge.
+Any decent web browser will do – Koel has been tested on Chrome 47, Firefox 42, Safari 8, Opera 34, and Edge.
+There is an official app for iOS and Android.
 
 ## Installation
 
@@ -30,9 +34,13 @@ There are three methods to install and start using Koel:
 
 ### Using a Pre-Compiled Archive
 
-Starting from v5.0.0, Koel supports installing from a pre-compiled archive, which eliminates the need of manually compiling the front-end assets. 
+Starting from v5.0.0, Koel supports installing from a pre-compiled archive,
+which eliminates the need of manually compiling the front-end assets. 
 
-First, go to the [Releases page](https://github.com/koel/koel/releases) on GitHub, download either the `.tar.gz` or `.zip` file found under "Assets," and unzip it into the destination web root directory. From there, run the following commands:
+From the [Releases page on GitHub](https://github.com/koel/koel/releases)
+download one of the non-source archives found under "Assets" 
+and unzip it into the destination web root directory.
+From there, run the following commands:
 
 ```bash
 composer install
@@ -61,15 +69,16 @@ In both cases, you should now be able to visit [http://localhost:8000](http://lo
 http://localhost:8000 is only the _development_ server for Koel (or rather, Laravel). For optimal performance, you'll want to set up the production version, the configuration of which varies depending on your webserver of choice (Apache, nginx, Caddy etc.) and is outside of this document's scope, but shouldn't be any different from that of a standard PHP application.</p>
 :::
 
-If you're on Debian, here's an [unofficial installation guide](https://gist.github.com/bplower/613a99156d603abac083). This may or may not be out of date, so use it with your own risk.
-
-If you want more control, edit `.env` file. There's quite a few settings there to tweak Koel to your needs. Remember to reload the server for the changes to take effects.
+If you want more control, edit `.env` file.
+There's quite a few settings there to tweak Koel to your needs.
+Remember to reload the server for the changes to take effects.
 
 ### Using Docker
 
-Koel has an official Docker image: [koel/docker](https://github.com/koel/docker), maintained by organization member [Hyzual](https://github.com/Hyzual). Communinity-supported images such as [0xcaff/koel](https://hub.docker.com/r/0xcaff/koel/) and [binhex/arch-koel](https://hub.docker.com/r/binhex/arch-koel/) are also available.
+Koel has an official Docker image: [koel/docker](https://github.com/koel/docker), maintained by organization member [Hyzual](https://github.com/Hyzual). Communinity-supported images such as [0xcaff/koel](https://hub.docker.com/r/0xcaff/koel/)
+and [binhex/arch-koel](https://hub.docker.com/r/binhex/arch-koel/) are also available.
 
-## Upgrade
+### Upgrade
 
 Check out [Releases](https://github.com/koel/koel/releases) for upgrade guides corresponding to your Koel version and installation method.
 
