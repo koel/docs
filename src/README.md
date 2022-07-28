@@ -140,8 +140,12 @@ Koel supports three streaming methods which can be configured via a `STREAMING_M
 
 * `x-accel-redirect`: Use nginx's [X-Accel](https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/) module. Refer to [`nginx.conf.example`](https://github.com/koel/koel/blob/master/nginx.conf.example) for a sample nginx configuration file.
 
+::: tip Tip
+If you're using a [Koel mobile app](https://koel.dev/#mobile) and can't play the songs, try switching the streaming method to `x-accel-redirect` or `x-sendfile` instead of `php`.
+:::
+
 :::warning Notice
-`STREAMING_METHOD` doesn't have effects if you're serving songs from Amazon S3.
+`STREAMING_METHOD` doesn't have effects if you're transcoding or serving songs from Amazon S3.
 :::
 
 ### Using the Web Interface
@@ -160,7 +164,7 @@ On a modern browser, you can control Koel using hardware media keys without even
 
 ### Instant Search
 
-Starting from v5.0.0, Koel provides an instant search feature, which perform full-text, fuzzy matches against your database of songs, albums, and artists. By default, Koel uses the [TNTSearch engine](https://github.com/teamtnt/tntsearch), which requires no configuration. You can also use [Algolia](https://www.algolia.com/) by populating these details into `.env`:
+Starting from v5.0.0, Koel provides an instant search feature that performs full-text, fuzzy searches against your database of songs, albums, and artists. By default, Koel uses the [TNTSearch engine](https://github.com/teamtnt/tntsearch), which requires no configuration. You can also use [Algolia](https://www.algolia.com/) by populating these details into `.env`:
 
 ```
 SCOUT_DRIVER=algolia
