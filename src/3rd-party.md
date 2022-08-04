@@ -14,6 +14,15 @@ Connecting Koel to Last.fm will instruct Koel to retrieve possible artist and al
 1. Populate the two variables `LASTFM_API_KEY` and `LASTFM_API_SECRET` with the credentials grabbed from step 1. This should enable Last.fm media information retrieving.
 1. To enable scrobbling as well, go to `http://<your-koel-host>/#!/profile` and click the **Connect** button under Last.fm Integration.
 
+## Spotify
+
+Starting from v6.0.0, Koel can integrate with Spotify to retrieve additional metadata (and more planned in the future). To enable the integration:
+
+1. Register for a developer account and create an app in [Spotify dashboard](https://developer.spotify.com/dashboard/)
+1. Populate `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` with the credentials from step 1.
+
+That's it!
+
 ## YouTube
 
 With YouTube integration, whenever a song is played, Koel will search YouTube for related videos and display them in the sidebar, ready for you to watch from within Koel itself. The only thing you need to do is fill in `.env` with your `YOUTUBE_API_KEY`, which can be obtained by doing the following:

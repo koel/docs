@@ -4,7 +4,7 @@ sidebar: auto
 
 # Troubleshooting
 
-So you're encountering an error. Don't panic. We're here to help.
+If you receive an error, the first step is to take a look at `storage/logs/laravel.log`. More often than not, this file will provide you with more details to aid in debugging. Below are some more popular problems users encounter with Koel and their solutions.
 
 ## For Koel
 
