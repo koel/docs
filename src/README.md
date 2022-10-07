@@ -260,7 +260,7 @@ $ yarn dev
 
   Laravel v9.22.1
 
-  > APP_URL: http://localhost
+  > APP_URL: http://localhost:8000
 ```
 
 A development version of Koel should now be available at `http://localhost:8000` with full HMR support.
