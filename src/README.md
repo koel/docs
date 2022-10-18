@@ -78,7 +78,7 @@ There are several ways for Koel to discover your media files. You can manually s
 #### Scan using the web interface
 
 :::warning
-Scanning via the web interface is vulnerably to HTTP timeout, so if you have a decent-sized library, opt for other methods instead.
+Scanning via the web interface is vulnerable to HTTP timeouts, so if you have a decent-sized library, opt for other methods instead.
 :::
 
 Upload your songs into a readable directory on your server – preferably outside of your web root dir – and configure Koel to scan and sync it by setting a "media path" under Manage ▸ Settings.
