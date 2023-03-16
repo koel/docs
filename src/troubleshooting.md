@@ -50,6 +50,9 @@ Solution: This usually happens with the native `php` <router-link to="/home?id=s
 
 Solution: Same as above.
 
+#### Song does not play back, browser receives `500 Internal Error` https://.../play...
+Make sure, the www-data process (or rather the user running php-fpm.sock / nginx) is allowed to access the files inside the media directory MEDIA_PATH, defined in koels `.env` file
+
 #### Koel doesn't play the next song when you lock your phone.
 
 Solution: Actually, no solution yet. This is a limitation for mobile browsers. A workaround can be using Google Chrome, which *seems* to be able to continue playback on an iOS device even when the device is locked, as long as it remains the active app.
