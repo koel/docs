@@ -155,7 +155,7 @@ If you're using a [Koel mobile app](https://koel.dev/#mobile) and can't play the
 
 ### Transcoding FLAC
 
-Koel by default will transcode FLAC to mp3 on the fly when streaming music. This can be disabled via a `TRANSCODE_FLAC` setting in `.env` file
+Koel by default will transcode FLAC to mp3 on the fly when streaming music. This behavior can be controlled via a `TRANSCODE_FLAC` setting in `.env` file:
 
 * `true`: Enables FLAC transcoding. Koel will transcode FLAC to mp3 on the fly. This is the default behavior.
 
