@@ -153,6 +153,14 @@ If you're using a [Koel mobile app](https://koel.dev/#mobile) and can't play the
 `STREAMING_METHOD` doesn't have effects if you're transcoding or serving songs from Amazon S3.
 :::
 
+### Transcoding FLAC
+
+Koel by default will transcode FLAC to mp3 on the fly when streaming music. This behavior can be controlled via a `TRANSCODE_FLAC` setting in `.env` file:
+
+* `true`: Enables FLAC transcoding. Koel will transcode FLAC to mp3 on the fly. This is the default behavior.
+
+* `false`: Disables FLAC transcoding. Koel will stream original FLAC files.
+
 ### Using the Web Interface
 
 Using the client component of Koel should be straightforward enough. If you've ever used Spotify, you should feel right at home. As a matter of fact, Koel's client interface is a shameless rip-off of Spotify's. You can search, you can sort, you can view by artists or albums, you can create playlists, you can like/unlike songs, and you can create other users to share the vibes. There are a couple of shortcut keys, too, for the nerds:
