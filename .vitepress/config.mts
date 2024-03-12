@@ -11,7 +11,8 @@ export default defineConfig({
         defer: 'defer',
         src: 'https://app.lemonsqueezy.com/js/lemon.js'
       }
-    ]
+    ],
+    ['link', { rel: 'icon', href: '/favicon.png', type: 'image/x-png' }]
   ],
   cleanUrls: true,
   markdown: {
@@ -24,6 +25,8 @@ export default defineConfig({
     outline: {
       level: 'deep'
     },
+
+    logoLink: '/guide/what-is-koel',
 
     // https://vitepress.dev/reference/default-theme-config
     nav: [
