@@ -1,5 +1,7 @@
 # What is Koel?
 
+![Koel's homepage](../assets/img/home.webp)
+
 A complete music streaming solution that hosts and streams your own music collection, Koel is designed to be: 
 
 * **Modern and snappy** – Unlike some of our music, we’re not living in the 90s anymore. Koel looks and functions like a true modern application: clean, gorgeous, and fast. As a matter of fact, it won’t even work on prehistoric browsers.
