@@ -30,5 +30,5 @@ If you're using [Koel mobile app](https://koel.dev/#mobile) and can't play the s
 Koel supports transcoding FLAC to mp3 on the fly when streaming music. This behavior can be controlled via a `TRANSCODE_FLAC` setting in `.env` file:
 
 * `false`: Disable FLAC transcoding. Koel will stream FLAC files as-is, producing the lossless audio quality. This is the default behavior.
-* `true`: Enable FLAC transcoding. Koel will transcode FLAC to mp3 on the fly. You need to `ffmpeg` installed on your server and set its executable path in the `FFMPEG_PATH` setting in `.env` file. The transcoding quality can be controlled via the `OUTPUT_BIT_RATE` setting in `.env` file (defaults to `128`).
+* `true`: Enable FLAC transcoding. Koel will transcode FLAC to mp3 on the fly. You need `ffmpeg` installed on your server and set its executable path via the `FFMPEG_PATH` setting in the `.env` file. The transcoding quality can also be controlled via `OUTPUT_BIT_RATE` (defaults to `128`).
 
