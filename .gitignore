@@ -1,4 +1,3 @@
 .vitepress/cache
-.vitepress/dist/**/*
-!.vitepress/dist/_redirects
+.vitepress/dist
 node_modules
