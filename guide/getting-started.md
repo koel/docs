@@ -13,7 +13,7 @@ The requirements for each part are as follows:
 
 ### Client
 
-* Any evergreen browser will do – Koel has been tested on Chrome 47, Firefox 42, Safari 8, Opera 34, and Edge.
+* Koel has been tested on Chrome 47, Firefox 42, Safari 8, Opera 34, and Edge, but having the latest version is always recommended.
 
 ## Installation
 
