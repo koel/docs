@@ -30,7 +30,9 @@ export default defineConfig({
 
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: 'https://koel.dev' }
+      { text: 'Home', link: 'https://koel.dev' },
+      { text: 'Getting Started', link: '/guide/getting-started' },
+      { text: 'Koel Plus', link: '/plus/what-is-koel-plus' },
     ],
 
     sidebar: [

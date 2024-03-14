@@ -6,9 +6,11 @@ import Themes from '../components/Themes.vue'
 import MobileAppScreenshots from '../components/MobileAppScreenshots.vue'
 import PlusBadge from '../components/PlusBadge.vue'
 import CaptionedImage from '../components/CaptionedImage.vue'
+import Layout from '../layout/Layout.vue'
 import './custom.scss'
 
 export default {
+  Layout,
   extends: DefaultTheme,
   enhanceApp({ app }) {
     app.component('InterfaceIcon', InterfaceIcon)

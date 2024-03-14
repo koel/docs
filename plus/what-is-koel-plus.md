@@ -16,7 +16,10 @@ Other features are being planned or actively developed, for example:
 - **Refined Roles & Permissions**: Create custom roles and assign them to users, controlling what they can and cannot do.
 - **Custom Themes**: Allow users to customize the look and feel of Koel in addition to the built-in themes.
 
-::: tip Do you need Koel Plus?
+## Do you need Koel Plus?
 Since Koel Plus's flagship feature is multi-library support, it's most useful in a multi-user environment, such as a family or a small organization. 
 If you're a single user, you might not need Koel Plus.
-:::
+
+However, if you want to host your media files on a cloud storage service like Amazon S3 or Dropbox, you'll need Koel Plus. 
+Purchasing Koel Plus is also a good way to support the active development of Koel.
+
