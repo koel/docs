@@ -304,8 +304,9 @@ Koel is built on the shoulder of the giants. My sincere thanks go to the folks b
 The continuous development of Koel is made possible thanks to the support from these generous sponsors:
 
 [<img :src="$withBase('/sponsors/keycdn.svg')" height="48" alt="KeyCDN logo" title="KeyCDN - Content Delivery Made Easy">](https://www.keycdn.com/?a=11519)
-
-[<img :src="$withBase('/sponsors/ray.png')" height="48" alt="Ray" title="Understand and fix bugs faster using Ray">](https://myray.app/)
+[<img :src="$withBase('/sponsors/whatthediff.svg')" height="48" alt="What The Diff logo" title="What The Diff — AI assistant for your pull requests">](https://whatthediff.ai/)
+[<img :src="$withBase('/sponsors/do.svg')" height="48" alt="DigitalOcean logo" title="DigitalOcean">](https://www.digitalocean.com)
+[<img :src="$withBase('/sponsors/ray.svg')" height="48" alt="Ray logo" title="Understand and fix bugs faster using Ray">](https://myray.app/)
 
 Want to help out as well? You can support Koel's development via [OpenCollective](https://opencollective.com/koel) or [GitHub Sponsors](https://github.com/users/phanan/sponsorship).
 
