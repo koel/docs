@@ -205,7 +205,7 @@ All subsequent updates to the music database will be synchronized automatically.
 
 ![Themes screenshot](./assets/img/themes.png)
 
-Koel supports multiple themes. You can preview and choose one from from the Profile & Preferences screen. Note that themes are not persisted across devices, as they make use of the browser's local storage.
+Koel supports multiple themes. You can preview and choose one from the Profile & Preferences screen. Note that themes are not persisted across devices, as they make use of the browser's local storage.
 
 ### Upload Artist and Album Images
 
@@ -303,9 +303,9 @@ Koel is built on the shoulder of the giants. My sincere thanks go to the folks b
 
 The continuous development of Koel is made possible thanks to the support from these generous sponsors:
 
-[<img :src="$withBase('/sponsors/render.svg')" height="32" alt="Render logo" title="Render - Cloud Hosting for Developers">](https://render.com)
-
 [<img :src="$withBase('/sponsors/keycdn.svg')" height="48" alt="KeyCDN logo" title="KeyCDN - Content Delivery Made Easy">](https://www.keycdn.com/?a=11519)
+
+[<img :src="$withBase('/sponsors/ray.png')" height="48" alt="Ray" title="Understand and fix bugs faster using Ray">](https://myray.app/)
 
 Want to help out as well? You can support Koel's development via [OpenCollective](https://opencollective.com/koel) or [GitHub Sponsors](https://github.com/users/phanan/sponsorship).
 
